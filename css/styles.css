@@ -7,7 +7,7 @@ body {
 .main-container {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "dashboard header header" "dashboard header header" "dashboard content content" "dashboard content content" "footer footer footer";
 }
@@ -16,6 +16,21 @@ body {
   background-color: #1E90FF;
   grid-area: dashboard;
   min-height: 85vh;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: grid;
+  grid-template-rows: 10vh;
+  padding: 15px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0 !important;
+}
+
+.logo {
+  font-size: 1.5rem;
 }
 
 .header-container {

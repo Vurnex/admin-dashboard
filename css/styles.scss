@@ -28,6 +28,24 @@ body {
                         "footer footer footer"
 }
 
+.nav-container {
+
+    display: none;
+    background-color: $color-dodgerblue;
+    
+    .navbar-brand {
+
+        color: white !important;
+        font-weight: bold;
+    }
+
+    .nav-link {
+
+        color: white !important;
+        font-weight: bold !important;
+    }
+}
+
 .dashboard-container {
 
     background-color: $color-dodgerblue;
@@ -50,7 +68,7 @@ body {
 
         margin-bottom: 20px;
     }
-    
+
 }
 
 .menu ul:nth-child(2) {
@@ -162,7 +180,6 @@ body {
     background-color: $color-silver;
     grid-area: content;
     min-height: 75vh;
-    min-width: 75vh;
 
     display: grid;
     gap: 20px;
@@ -296,4 +313,103 @@ body {
     grid-area: footer;
     min-height: 100%;
     align-self: end;
+}
+
+@media (max-width: 830px) {
+
+    .main-container {
+
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "navbar"
+                            "header"
+                            "content"
+                            "footer"
+    }
+    
+    .dashboard-container {
+
+        display: none;
+    }
+    
+    .nav-container {
+
+        grid-area: navbar;
+        display: grid;
+        
+    }
+
+    .trending-container {
+
+        width: auto;
+    }
+  
+}
+
+@media (max-width: 666px) {
+
+    
+    .main-container {
+
+        display: block;
+    }
+    
+    .header-container {
+
+        gap: 10px;
+        grid-template-rows: 26px 65px 30px;
+        grid-template-columns: auto;
+        padding-top: 20px;
+        padding-left: 20px;
+        min-height: 25vh;
+    }
+
+    .searchbar-container {
+
+        grid-row-start: 1;
+        grid-column-start: unset;
+        width: 95%;
+    }
+
+    .header-bottom-left {
+
+        grid-row-start: 2;
+        grid-column-start: unset;
+    }
+
+    .header-bottom-right {
+
+        grid-row-start: 3;
+        grid-column-start: unset;
+    }
+
+    .header-right {
+
+        display: none;
+    }
+
+    .content-container {
+
+        min-height: 75vh;
+    
+        grid-template-columns: auto;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+                            "plabel"
+                            "projects"
+                            "alabel"
+                            "announcements"
+                            "trending";
+
+    }
+
+    .alabel {
+
+        grid-column-start: unset;
+    }
+
+    .projects-container {
+
+        grid-template-columns: unset;
+    }
 }
